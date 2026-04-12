@@ -3,13 +3,14 @@ import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "motion/
 import { IconMenu2, IconX } from "@tabler/icons-react";
 import { cn } from "../../lib/utils";
 
-type Tool = 'home' | 'oncoscan' | 'pdt' | 'dosimetry';
+type Tool = 'home' | 'oncoscan' | 'pdt' | 'dosimetry' | 'masterclass';
 
 const NAV_ITEMS: { id: Tool; label: string; sub: string }[] = [
-  { id: 'home',      label: 'Home',          sub: 'Overview' },
-  { id: 'oncoscan',  label: 'OncoScan AI',   sub: 'X-Ray Analysis' },
-  { id: 'pdt',       label: 'PDT Simulator', sub: 'Treatment Planning' },
-  { id: 'dosimetry', label: 'AI Dosimetry',  sub: 'Dose Optimization' },
+  { id: 'home',        label: 'Home',          sub: 'Overview' },
+  { id: 'oncoscan',    label: 'OncoScan AI',   sub: 'X-Ray Analysis' },
+  { id: 'pdt',         label: 'PDT Simulator', sub: 'Treatment Planning' },
+  { id: 'dosimetry',   label: 'AI Dosimetry',  sub: 'Dose Optimization' },
+  { id: 'masterclass', label: 'Masterclass',   sub: 'PDT Education' },
 ];
 
 export default function Navigation({ active, onChange }: { active: Tool; onChange: (t: Tool) => void }) {
@@ -29,7 +30,7 @@ export default function Navigation({ active, onChange }: { active: Tool; onChang
     >
       {/* Desktop nav pill */}
       <motion.nav
-        animate={{ width: scrolled ? "auto" : "100%", maxWidth: scrolled ? 680 : 1280 }}
+        animate={{ width: scrolled ? "auto" : "100%", maxWidth: scrolled ? 780 : 1280 }}
         transition={{ type: "spring", stiffness: 300, damping: 30 }}
         style={{
           background: scrolled ? "rgba(9,29,46,0.96)" : "rgba(9,29,46,0.85)",
