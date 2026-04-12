@@ -3,11 +3,10 @@ import Navigation from './components/shared/Navigation';
 import OncoScanPage from './components/oncoscan/OncoScanPage';
 import PDTSimulator from './components/pdt/PDTSimulator';
 import DosimetryModel from './components/dosimetry/DosimetryModel';
-import BiophotonicsPage from './components/masterclass/BiophotonicsPage';
 import HeroPage from './components/hero/HeroPage';
 import { BackgroundBeams } from './components/ui/background-beams';
 
-type Tool = 'home' | 'oncoscan' | 'pdt' | 'dosimetry' | 'masterclass';
+type Tool = 'home' | 'oncoscan' | 'pdt' | 'dosimetry';
 
 export default function App() {
   const [tool, setTool] = useState<Tool>('home');
@@ -23,11 +22,10 @@ export default function App() {
       <div style={{ position: 'relative', zIndex: 1 }}>
         <Navigation active={tool} onChange={setTool} />
         <main>
-          {tool === 'home'        && <HeroPage onNavigate={(t) => setTool(t as Tool)} />}
-          {tool === 'oncoscan'   && <OncoScanPage />}
-          {tool === 'pdt'        && <PDTSimulator />}
-          {tool === 'dosimetry'  && <DosimetryModel />}
-          {tool === 'masterclass' && <BiophotonicsPage />}
+          {tool === 'home'      && <HeroPage onNavigate={(t) => setTool(t as Tool)} />}
+          {tool === 'oncoscan'  && <OncoScanPage />}
+          {tool === 'pdt'       && <PDTSimulator />}
+          {tool === 'dosimetry' && <DosimetryModel />}
         </main>
         {tool !== 'home' && (
           <footer style={{ borderTop: '1px solid rgba(141,171,168,0.15)', padding: '20px 0', background: 'rgba(9,29,46,0.9)' }}>
