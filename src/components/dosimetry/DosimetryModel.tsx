@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useMemo } from 'react';
 
 // ── SHARED DATA (same as PDT Simulator for consistency) ────────────
@@ -533,6 +534,14 @@ export default function DosimetryModel() {
             </div>
           </div>
         </div>
+=======
+export default function DosimetryModel() {
+  return (
+    <div style={{ minHeight: '100vh', paddingTop: 80, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <div style={{ textAlign: 'center' }}>
+        <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 32, fontWeight: 700, color: '#e4eeee', marginBottom: 12 }}>AI Dosimetry Model</div>
+        <p style={{ color: '#5c7f7c', fontSize: 14 }}>Coming soon — complete OncoScan AI first</p>
+>>>>>>> eeb4c537ea74731802203ec4092c162b4b2d2456
       </div>
     </div>
   );
