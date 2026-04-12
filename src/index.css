@@ -57,7 +57,6 @@ input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.2); }
   to   { opacity: 1; transform: translateY(0); }
 }
 .fade-up { animation: fadeUp 0.4s ease forwards; }
-<<<<<<< HEAD
 
 /* ── shadcn/card CSS variables (dark medical theme) ── */
 :root {
@@ -71,5 +70,3 @@ input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.2); }
   --primary: #4ecdc4;
   --primary-foreground: #091d2e;
 }
-=======
->>>>>>> eeb4c537ea74731802203ec4092c162b4b2d2456

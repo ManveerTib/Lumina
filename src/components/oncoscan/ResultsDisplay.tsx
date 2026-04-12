@@ -92,11 +92,7 @@ export default function ResultsDisplay({ analysis, imagePreview }: { analysis: A
           style={{ width: '100%', maxHeight: 280, objectFit: 'contain', background: '#000', display: 'block' }} />
         {showHeatmap && (
           <div style={{ padding: '8px 16px', background: 'rgba(78,205,196,0.04)', borderTop: '1px solid rgba(141,171,168,0.1)' }}>
-<<<<<<< HEAD
             <p style={{ ...label, fontSize: 12, color: '#b8cece' }}>Grad-CAM — bright regions = highest model attention for predicted class</p>
-=======
-            <p style={{ ...label, fontSize: 9, color: '#5c7f7c' }}>Grad-CAM — bright regions = highest model attention for predicted class</p>
->>>>>>> eeb4c537ea74731802203ec4092c162b4b2d2456
           </div>
         )}
       </div>
@@ -113,11 +109,7 @@ export default function ResultsDisplay({ analysis, imagePreview }: { analysis: A
             return (
               <div key={name}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4 }}>
-<<<<<<< HEAD
                   <span style={{ fontSize: 12, color: '#e4eeee' }}>{name.replace('_', ' ')}</span>
-=======
-                  <span style={{ fontSize: 12, color: prob > 50 ? '#e4eeee' : '#8daba8' }}>{name.replace('_', ' ')}</span>
->>>>>>> eeb4c537ea74731802203ec4092c162b4b2d2456
                   <span style={{ ...mono, fontSize: 12, color: c }}>{prob.toFixed(1)}%</span>
                 </div>
                 <div className="prob-bar">
@@ -155,11 +147,7 @@ export default function ResultsDisplay({ analysis, imagePreview }: { analysis: A
       )}
 
       {/* Disclaimer */}
-<<<<<<< HEAD
       <div style={{ padding: 12, background: 'rgba(141,171,168,0.04)', border: '1px solid rgba(141,171,168,0.12)', borderRadius: 10, fontSize: 11, color: '#8daba8', lineHeight: 1.6 }}>
-=======
-      <div style={{ padding: 12, background: 'rgba(141,171,168,0.04)', border: '1px solid rgba(141,171,168,0.12)', borderRadius: 10, fontSize: 11, color: '#5c7f7c', lineHeight: 1.6 }}>
->>>>>>> eeb4c537ea74731802203ec4092c162b4b2d2456
         OncoScan AI is a research screening tool — not a diagnostic instrument. Model: CheXNet DenseNet121. All results require radiologist verification.
       </div>
     </div>
